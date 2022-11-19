@@ -9,6 +9,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Starter</title>
+  <link rel="shortcut icon" href="../../../my_app/assets/image/favicon.ico" type="image/x-icon">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -44,9 +45,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="index3.html" class="brand-link">
-        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <a href="#" class="brand-link">
+        <img src="../../../my_app/assets/image/icon.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">My App</span>
       </a>
 
       <!-- Sidebar -->
@@ -54,10 +55,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="../../../my_app/assets/image/user.png" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Alexander Pierce</a>
+            <a href="#" class="d-block">User</a>
           </div>
         </div>
 
@@ -76,13 +77,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="?view=tambah_mahasiswa" class="nav-link">
                     <i class="fas fa-plus nav-icon"></i>
                     <p>Tambah Mahasiswa</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../../../my_app/app/view/mahasiswa/index.php" class="nav-link">
+                  <a href="?view=mahasiswa" class="nav-link">
                     <i class="fas fa-eye nav-icon"></i>
                     <p>Lihat Mahasiswa</p>
                   </a>
@@ -99,13 +100,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="?view=tambah_user" class="nav-link">
                     <i class="fas fa-plus nav-icon"></i>
                     <p>Tambah User</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="../../../my_app/app/view/user/index.php" class="nav-link">
+                  <a href="?view=user" class="nav-link">
                     <i class="fas fa-eye nav-icon"></i>
                     <p>Lihat User</p>
                   </a>
@@ -141,66 +142,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <!-- Main content -->
       <div class="content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's
-                    content.
-                  </p>
-
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
-                </div>
-              </div>
-
-              <div class="card card-primary card-outline">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's
-                    content.
-                  </p>
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
-                </div>
-              </div><!-- /.card -->
-            </div>
-            <!-- /.col-md-6 -->
-            <div class="col-lg-6">
-              <div class="card">
-                <div class="card-header">
-                  <h5 class="m-0">Featured</h5>
-                </div>
-                <div class="card-body">
-                  <h6 class="card-title">Special title treatment</h6>
-
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-
-              <div class="card card-primary card-outline">
-                <div class="card-header">
-                  <h5 class="m-0">Featured</h5>
-                </div>
-                <div class="card-body">
-                  <h6 class="card-title">Special title treatment</h6>
-
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <!-- /.col-md-6 -->
-          </div>
-          <!-- /.row -->
-        </div><!-- /.container-fluid -->
+        <?php include "../my_app/app/config/route.php" ?>
       </div>
       <!-- /.content -->
     </div>
@@ -218,18 +160,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main Footer -->
     <footer class="main-footer">
-      <!-- To the right -->
-      <div class="float-right d-none d-sm-inline">
-        Anything you want
-      </div>
-      <!-- Default to the left -->
-      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+      <center>
+        <strong>Copyright &copy; <label id="year"></label> <a href="#">MyApp</a></strong>
+      </center>
     </footer>
   </div>
   <!-- ./wrapper -->
 
   <!-- REQUIRED SCRIPTS -->
 
+  <script>
+    const date = new Date().getFullYear()
+    document.getElementById('year').innerHTML = date;
+  </script>
   <!-- jQuery -->
   <script src="../../../my_app/assets/template/plugins/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
